@@ -550,7 +550,7 @@ checkForDownloadTool() {
    else
       if [[ $downloadTool =~ (wget)$ ]]; then
          # wget command
-         downloadTool="$downloadTool -P $cacheFolder --show-progress -q -o /dev/null -c "
+         downloadTool="$downloadTool -P $cacheFolder -v -q -o /dev/null -c "
       else
          # curl command
          downloadTool="$downloadTool -# --output-dir $cacheFolder -L "
